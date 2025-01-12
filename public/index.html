@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>SkyWay Handson</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="videosContainer">
+    <video id="myStream" autoplay muted></video>
+</div>
+<div class="myControllerContainer">
+    <button id="button1">fullscreen</button>
+    <p>Your ID: <span id="my-id">...</span></p>
+    <form id="make-call">
+        <input type="text" placeholder="Join room..." id="join-room">
+        <button type="submit">Join</button>
+    </form>
+    <div id="end-call">
+        <p>Currently in room <span id="room-id">...</span></p>
+        <button>Leave</button>
+    </div>
+</div>
+</body>
+</html>
