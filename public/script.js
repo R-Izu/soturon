@@ -88,14 +88,14 @@ $(function () {
                 };
 
                 // POSTで送信 (fetchでサーバの /updateData に送る)
-                fetch('/updateData', {
+                fetch('http://192.168.100.18:8081/updateData', { // サーバーのIPとポートを指定
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 }).then(res => {
-                    // console.log("位置情報送信完了");
+                    console.log("位置情報送信完了:", data);
                 }).catch(err => {
-                    console.error(err);
+                    console.error("位置情報送信エラー:", err);
                 });
             });
         }
